@@ -151,7 +151,7 @@ function hungryDog(dogWeight, dogAge){
       return(dogWeight * .04);
     } if (dogWeight >= 11 && dogWeight <= 15) {
       return(dogWeight * .03);
-    } if (dogWeight < 15) {
+    } if (dogWeight > 15) {
       return(dogWeight * .02);
     }
   } else if (dogAge >= (2 / 12) && dogAge <= (4 /12)) {
@@ -189,10 +189,37 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let randomChoice = Math.floor((Math.random() * 3) + 1);
+let computerChoice;
+if (randomChoice === 1) {
+  computerChoice = "rock";
+}
+if (randomChoice === 2) {
+  computerChoice = "paper";
+}
+if (randomChoice === 3) {
+  computerChoice = "scissors";
 }
 
+function game(user, computer){
+  if (user === computer) {
+    return("it's a tie");
+  }
+  else if (user === "scissors" && computer === "paper") {
+    return("you win!");
+  }
+  else if (user === "paper" && computer === "rock") {
+    return("you win!");
+  }
+  else if (user === "rock" && computer === "scissors") {
+    return("you win!");
+  }   
+  else {
+    return("you lose!");
+  }
+}
+
+console.log(game("rock",computerChoice));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
