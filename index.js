@@ -91,8 +91,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(dogAge){
-  return(dogAge * 7);
+function dogYears(humanYears){
+  return(humanYears * 7);
 }
 console.log(dogYears(6));
 
@@ -143,11 +143,30 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(dogWeight, dogAge){
+  if (dogAge >= 1) {
+    if (dogWeight <= 5) {
+      return(dogWeight * .05);
+    } if (dogWeight >= 5 && dogWeight <= 10) {
+      return(dogWeight * .04);
+    } if (dogWeight >= 11 && dogWeight <= 15) {
+      return(dogWeight * .03);
+    } if (dogWeight < 15) {
+      return(dogWeight * .02);
+    }
+  } else if (dogAge >= (2 / 12) && dogAge <= (4 /12)) {
+      return(dogWeight * .1);
+    } 
+    else if (dogAge > (4 / 12) && dogAge <= (7 /12)) {
+      return(dogWeight * .05);
+    } 
+    else if (dogAge > (7 / 12) && dogAge < (12 /12)) {
+      return(dogWeight * .04);
+    }
+  }
 
 
+console.log(hungryDog(4,1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
