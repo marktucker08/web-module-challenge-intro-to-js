@@ -59,8 +59,8 @@ Do the following:
    HINT: look up the Number method
 */
 let num1 = "1999";
-num1 = Number(num1)
-console.log(num1)
+num1 = Number(num1);
+console.log(num1);
 
 
 
@@ -73,9 +73,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(number1,number2){
+  return(number1 * number2);
 }
+
+console.log(multiply(11,19));
 
 
 
